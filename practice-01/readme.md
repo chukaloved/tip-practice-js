@@ -6,13 +6,13 @@
 
 | Выражение     |  ожидание до запуска | Фактическое значение | Тип результата | объяснение |
 |---------- |----------------------|----------------------|-----------|------------|
-| "8" + 2   | "82"           | "82"          | string  |Заполнить   |
-| "8" - 2   | 6           | 6          | number  |Заполнить   |
-| Number("8") + 2   | 10           | 10           | number |Заполнить   |
-| "12" > "3"  | false           | false           | boolean  |Заполнить   |
-| 12 === "12"  |  false         | false          | boolean  |Заполнить   |
-| Number("")  | 0           | 0            | Number  |Заполнить   |
-| Number("text")  | NaN            | NaN           | number  |Заполнить   |
-| Boolean("false")   | true           | true           | boolean  |Заполнить   |
-| typeoff null   | "object"          | "object"            |string  | Заполнить |
-| typeoff NaN  | "number"           | "number"           | string  |Заполнить   |
+| "8" + 2   | "82"           | "82"          | string  |Если один операндов имеет тип string то "+" склеивает строки и число 2 тоже приобретает тип string   |
+| "8" - 2   | 6           | 6          | number  | "-" не работает со строками, поэтому string приводится к типу number  |
+| Number("8") + 2   | 10           | 10           | number |строку перевели в number и сложили с числом 2   |
+| "12" > "3"  | false           | false           | boolean  |Строки сравниваются по количеству символов, поэтому получили резьат false   |
+| 12 === "12"  |  false         | false          | boolean  |строгое сравнение не приводит типы, отсюда получаем результат false, из-за того, что сравниваем разные типы  |
+| Number("")  | 0           | 0            | Number  |пустая строка при приведении к number даёт 0  |
+| Number("text")  | NaN            | NaN           | number  |текст нельзя преобразовать в число, отсюда получаем NaN  |
+| Boolean("false")   | true           | true           | boolean  | Любая непустая строка даёn true   |
+| typeoff null   | "object"          | "object"            |string  | Оператор typeof null возвращает 'object' из-за исторической ошибки JS |
+| typeoff NaN  | "number"           | "number"           | string  | NaN является number, отсюда результат "number"  |
