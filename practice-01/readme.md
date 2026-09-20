@@ -38,7 +38,7 @@ node practice-01/js/progress-input.js
 | Number("8") + 2   | 10           | 10           | number |строку перевели в number и сложили с числом 2   |
 | "12" > "3"  | false           | false           | boolean  |Строки сравниваются посимвольно, поэтому результат false   |
 | 12 === "12"  |  false         | false          | boolean  |строгое сравнение не приводит типы, отсюда получаем результат false, из-за того, что сравниваем разные типы  |
-| Number("")  | 0           | 0            | Number  |пустая строка при приведении к number даёт 0  |
+| Number("")  | 0           | 0            | number  |пустая строка при приведении к number даёт 0  |
 | Number("text")  | NaN            | NaN           | number  |текст нельзя преобразовать в число, отсюда получаем NaN  |
 | Boolean("false")   | true           | true           | boolean  | Любая непустая строка даёт true   |
 | typeof null   | "object"          | "object"            |string  | Оператор typeof null возвращает 'object' из-за исторической ошибки JS |
