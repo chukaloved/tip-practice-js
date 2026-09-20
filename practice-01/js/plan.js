@@ -1,8 +1,8 @@
 "use strict";
 
-const totalTasks = 5;
-const completedTasks = 2;
-const dailyLimit = "2";
+const totalTasks = 20;
+const completedTasks = 11;
+const dailyLimit = 6;
 
 const maxTasks = 1000;
 const maxDailyLimit = 1000;
